@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Your Strategy Call</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(0,0,0,0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { background-color: #f3f4f6; }
+        
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            opacity: 0.5;
+        }
+
+        .text-blue-accent {
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8 font-sans antialiased">
+
+    <div class="max-w-5xl w-full">
+        <!-- Booking Card -->
+        <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
+            
+            <!-- Urgency Banner -->
+            <div class="bg-[#fdf6e3] border-b border-amber-100 p-4 text-center">
+                <p class="text-amber-800 font-semibold flex items-center justify-center gap-2 text-sm sm:text-base">
+                    <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464l-.707-.707a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414zm2.12 10.607a1 1 0 010-1.414l.706-.707a1 1 0 111.414 1.414l-.707.707a1 1 0 01-1.414 0zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+                    High Demand: Only <span class="text-amber-600 font-bold underline decoration-2 underline-offset-2">5</span> strategy calls available this week.
+                </p>
+            </div>
+
+            <!-- Main Layout: Vertically Centered Grid -->
+            <div class="p-8 sm:p-12 lg:grid lg:grid-cols-12 lg:gap-12 items-center">
+                
+                <!-- Left Content: Heading & Value List -->
+                <div class="lg:col-span-6 mb-10 lg:mb-0 lg:border-r lg:border-slate-100 lg:pr-12 text-center lg:text-left">
+                    <h1 class="text-3xl sm:text-5xl font-extrabold text-[#111827] mb-6 tracking-tight leading-[1.1]">
+                        Book Your Free <br>
+                        <span class="text-blue-accent">Website Strategy Call</span>
+                    </h1>
+
+                    <!-- Trust Badges -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 mb-8 border-b border-slate-100 pb-8">
+                        <div class="flex items-center gap-2 text-sm font-semibold text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Affordable
+                        </div>
+                        <div class="flex items-center gap-2 text-sm font-semibold text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            High-Impact
+                        </div>
+                        <div class="flex items-center gap-2 text-sm font-semibold text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Results-Driven
+                        </div>
+                    </div>
+
+                    <!-- What You'll Get Section -->
+                    <div class="space-y-6 text-left">
+                        <div>
+                            <h2 class="text-xl font-bold text-slate-900 mb-2">What You’ll Get on This 100% Free Call</h2>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-6 italic">No high-pressure sales pitches. Just 30 minutes of actionable advice tailored to your specific business goals.</p>
+                        </div>
+                        
+                        <div class="space-y-5">
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 flex-shrink-0 w-5 h-5 bg-brand-600/10 text-brand-600 rounded-full flex items-center justify-center">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900 leading-tight">Live Website Audit</p>
+                                    <p class="text-slate-500 text-xs mt-0.5">We'll review your current site and pinpoint exactly what's costing you sales.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 flex-shrink-0 w-5 h-5 bg-brand-600/10 text-brand-600 rounded-full flex items-center justify-center">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900 leading-tight">Custom Growth Strategy</p>
+                                    <p class="text-slate-500 text-xs mt-0.5">A step-by-step roadmap specifically designed for your local market.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 flex-shrink-0 w-5 h-5 bg-brand-600/10 text-brand-600 rounded-full flex items-center justify-center">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900 leading-tight">Budget-Friendly Solutions</p>
+                                    <p class="text-slate-500 text-xs mt-0.5">Clear breakdown of what a high-converting website actually costs.</p>
+                                </div>
+                            </div>
+                            <!-- NEW ITEM ADDED BELOW -->
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 flex-shrink-0 w-5 h-5 bg-brand-600/10 text-brand-600 rounded-full flex items-center justify-center">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900 leading-tight">Clear Next Steps</p>
+                                    <p class="text-slate-500 text-xs mt-0.5">Leave the call knowing exactly what to do next to improve your online presence immediately.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content: The Form -->
+                <div class="lg:col-span-6">
+                    <form id="bookingForm" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                        <div>
+                            <label for="name" class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5 ml-1">Full Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="John Doe">
+                        </div>
+                        
+                        <div>
+                            <label for="business" class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5 ml-1">Business Type</label>
+                            <select id="business" required class="w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-slate-700">
+                                <option value="" disabled selected>Select your industry...</option>
+                                <option value="shop">Local Shop / Retail</option>
+                                <option value="coach">Coach / Consultant</option>
+                                <option value="salon">Salon / Spa</option>
+                                <option value="startup">Startup / Tech</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="email" class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5 ml-1">Email</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="john@example.com">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5 ml-1">Phone Number</label>
+                                <input type="tel" id="phone" required class="w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="7498038027">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="date" class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5 ml-1">Preferred Date</label>
+                                <input type="date" id="date" required class="w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-slate-700">
+                            </div>
+                            <div>
+                                <label for="time" class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5 ml-1">Preferred Time (AM/PM)</label>
+                                <select id="time" required class="w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-slate-700">
+                                    <option value="" disabled selected>Select a time slot...</option>
+                                    <optgroup label="Morning">
+                                        <option value="09:00 AM">09:00 AM</option><option value="10:00 AM">10:00 AM</option><option value="11:00 AM">11:00 AM</option>
+                                    </optgroup>
+                                    <optgroup label="Afternoon">
+                                        <option value="12:00 PM">12:00 PM</option><option value="01:00 PM">01:00 PM</option><option value="02:00 PM">02:00 PM</option><option value="03:00 PM">03:00 PM</option><option value="04:00 PM">04:00 PM</option>
+                                    </optgroup>
+                                    <optgroup label="Evening">
+                                        <option value="05:00 PM">05:00 PM</option><option value="06:00 PM">06:00 PM</option><option value="07:00 PM">07:00 PM</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="pt-2 text-center">
+                            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4.5 px-8 rounded-2xl transition-all transform hover:-translate-y-1 shadow-xl shadow-brand-500/30 flex justify-center items-center gap-3 text-lg mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Book a free call
+                            </button>
+                            
+                            <div class="text-slate-600 font-medium">
+                                Have questions? <a href="tel:7498038027" class="text-brand-600 font-bold hover:underline">7498038027</a>
+                            </div>
+                        </div>
+                        
+                        <p class="text-[11px] text-center text-slate-400 mt-4 flex items-center justify-center gap-1.5">
+                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                            Your information is secure. No spam, ever.
+                        </p>
+                    </form>
+                    
+                    <!-- Success Message -->
+                    <div id="successMessage" class="hidden h-full flex flex-col items-center justify-center text-center py-12">
+                        <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 mb-6 shadow-sm">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-slate-900 mb-3 tracking-tight">Booking Requested!</h3>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-4">Connecting you to WhatsApp to confirm your spot...</p>
+                        <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl max-w-sm mx-auto">
+                            <p class="text-blue-800 text-sm font-medium">
+                                <span class="block mb-1 font-bold">📅 Need to reschedule?</span>
+                                If you need to change your time, let us know on WhatsApp or call <a href="tel:7498038027" class="font-bold underline">7498038027</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Trust Footer -->
+        <p class="text-center text-slate-400 text-sm mt-8 font-medium">
+            Trusted by 500+ local businesses and growing startups.
+        </p>
+    </div>
+
+    <script>
+        const dateInput = document.getElementById('date');
+        if(dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const business = document.getElementById('business').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            const form = document.getElementById('bookingForm');
+            const success = document.getElementById('successMessage');
+            form.style.display = 'none';
+            success.classList.remove('hidden');
+
+            const message = `Hello! I'd like to book a free Website Strategy Call.%0A%0A*Details:*%0A- *Name:* ${name}%0A- *Business:* ${business}%0A- *Email:* ${email}%0A- *Phone:* ${phone}%0A- *Preferred Date:* ${date}%0A- *Preferred Time:* ${time}`;
+            const whatsappUrl = `https://wa.me/917498038027?text=${message}`;
+
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
